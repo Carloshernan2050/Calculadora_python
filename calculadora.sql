@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 03-12-2024 a las 23:21:03
+-- Tiempo de generación: 05-12-2024 a las 22:54:21
 -- Versión del servidor: 8.0.30
 -- Versión de PHP: 8.1.10
 
@@ -29,9 +29,9 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `operacion` (
   `id` int NOT NULL,
-  `numero1` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `numero1` int NOT NULL DEFAULT '0',
   `operador` varchar(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `numero2` varchar(50) NOT NULL
+  `numero2` int NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
@@ -55,7 +55,7 @@ CREATE TABLE `operacion_resultado` (
 
 CREATE TABLE `resultado` (
   `id` int NOT NULL,
-  `resultado` float NOT NULL DEFAULT '0'
+  `resultados` float NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
