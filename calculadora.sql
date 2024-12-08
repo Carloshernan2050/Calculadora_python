@@ -43,8 +43,7 @@ CREATE TABLE `operacion` (
 CREATE TABLE `operacion_resultado` (
   `id` int NOT NULL,
   `id_operacion` int NOT NULL DEFAULT '0',
-  `id_resultado` int NOT NULL DEFAULT '0',
-  `fecha_operacion` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `id_resultado` int NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
