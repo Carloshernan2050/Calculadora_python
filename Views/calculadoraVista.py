@@ -12,13 +12,12 @@ class VistaCalculador:
     
     @staticmethod
     def obtener_datos_operacion():
-        num1 = input("Ingrese el primer numero: ")
-        print()
-        print( "Signos Disponibles [+, -, *, /]" )
-        print()
-        operador = input("Ingrese el signo de la operacion : ")
-        print()
-        num2 = input("Ingrese el segundo numero:")
+        num1 = input("Ingrese el primer numero: \n") 
+        print("\nSignos Disponibles [+, -, *, /] \n" )
+        
+        operador = input("Ingrese el signo de la operacion: \n ")
+        
+        num2 = input("Ingrese el segundo numero: \n")
         return num1, operador, num2
 
     @staticmethod
@@ -31,3 +30,4 @@ class VistaCalculador:
     @staticmethod
     def mostrar_mensaje(mensaje):
         print(f"\n{mensaje}")
+    
