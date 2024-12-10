@@ -20,7 +20,7 @@ class VistaCalculador:
         print()
         num2 = input("Ingrese el segundo numero:")
         return num1, operador, num2
-    
+
     @staticmethod
     def mostrar_historial(historial):
         print("\n--- Historial de Operaciones ---")

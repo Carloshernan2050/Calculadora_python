@@ -126,7 +126,7 @@ class ControladorCalculadora:
                             num1 = int(num1) 
 
                             if  operador != "/":
-                                self.vista.mostrar_mensaje("Error: De acuerdo con la 0peracion eligida el Signo debe ser +")
+                                self.vista.mostrar_mensaje("Error: De acuerdo con la 0peracion eligida el Signo debe ser /")
 
                             else:
                                 if num2 == "0":
