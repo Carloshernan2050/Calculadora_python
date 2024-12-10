@@ -13,7 +13,6 @@ class VistaCalculador:
     @staticmethod
     def obtener_datos_operacion():
         num1 = input("Ingrese el primer numero: \n") 
-        print("\nSignos Disponibles [+, -, *, /] \n" )
         
         operador = input("Ingrese el signo de la operacion: \n ")
         
