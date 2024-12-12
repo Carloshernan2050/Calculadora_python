@@ -1,4 +1,5 @@
-from Models.Modelo import ModeloCaculadora
+from colorama import Fore, Style
+from Models.calculadoraModelo import ModeloCaculadora
 from Views.calculadoraVista import VistaCalculador
 from Controllers.calculadoraControlador import ControladorCalculadora
 
@@ -10,10 +11,10 @@ if __name__ == "__main__":
     controlador_calculadora = ControladorCalculadora(modelo_calculadora, vista_calculadora) 
 
 while True:
-    print("\n--- Sistema Calculadora ---")
+    print(Fore.LIGHTGREEN_EX +"\n--- Sistema Calculadora ---" + Style.RESET_ALL)
     print("1. Calculadora")
     print("2. Salir")
-    opcion = input("Seleccione una opción: ")
+    opcion = input(Fore.LIGHTRED_EX + "Seleccione una opción: " + Style.RESET_ALL)
 
     if opcion == '1':  # Calculadora
         controlador_calculadora.ejecutar_c()

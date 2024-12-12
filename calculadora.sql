@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 05-12-2024 a las 22:54:21
+-- Tiempo de generación: 12-12-2024 a las 23:52:46
 -- Versión del servidor: 8.0.30
 -- Versión de PHP: 8.1.10
 
@@ -29,9 +29,9 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `operacion` (
   `id` int NOT NULL,
-  `numero1` int NOT NULL DEFAULT '0',
+  `num1` int NOT NULL DEFAULT '0',
   `operador` varchar(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `numero2` int NOT NULL DEFAULT '0'
+  `num2` int NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
@@ -54,7 +54,7 @@ CREATE TABLE `operacion_resultado` (
 
 CREATE TABLE `resultado` (
   `id` int NOT NULL,
-  `resultados` float NOT NULL DEFAULT '0'
+  `resultados` int NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -72,8 +72,8 @@ ALTER TABLE `operacion`
 --
 ALTER TABLE `operacion_resultado`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `FK1_operacion` (`id_operacion`),
-  ADD KEY `FK2_resultado` (`id_resultado`);
+  ADD KEY `FK2_resultado` (`id_resultado`),
+  ADD KEY `FK1_operacion` (`id_operacion`);
 
 --
 -- Indices de la tabla `resultado`
@@ -89,7 +89,7 @@ ALTER TABLE `resultado`
 -- AUTO_INCREMENT de la tabla `operacion`
 --
 ALTER TABLE `operacion`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `operacion_resultado`
