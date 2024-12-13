@@ -14,13 +14,13 @@ while True:
     print(Fore.LIGHTGREEN_EX +"\n--- Sistema Calculadora ---" + Style.RESET_ALL)
     print("1. Calculadora")
     print("2. Salir")
-    opcion = input(Fore.LIGHTRED_EX + "Seleccione una opción: " + Style.RESET_ALL)
+    opcion = input(Fore.LIGHTBLUE_EX + "Seleccione una opción (1-2): " + Style.RESET_ALL)
 
     if opcion == '1':  # Calculadora
         controlador_calculadora.ejecutar_c()
     elif opcion == '2': # Salir
-        print("Saliendo de la Calculadora.")
+        print(Fore.MAGENTA + "Saliendo de la Calculadora." + Style.RESET_ALL )
         break
     else:
-        print("Opcion no valida.")
+        print(Fore.MAGENTA + "Opcion no valida."+ Style.RESET_ALL)
         

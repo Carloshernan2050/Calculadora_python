@@ -8,7 +8,7 @@ class VistaCalculador:
         print(Fore.GREEN +"2. Restar" + Style.RESET_ALL)
         print(Fore.CYAN+ "3. Multiplicar" + Style.RESET_ALL)
         print(Fore.CYAN + "4. Dividir" + Style.RESET_ALL)
-        print(Fore.MAGENTA + "5. Historial" + Style.RESET_ALL)
+        print(Fore.CYAN + "5. Historial" + Style.RESET_ALL)
         print(Fore.RESET + "6. Salir" + Style.RESET_ALL)
     
     @staticmethod
