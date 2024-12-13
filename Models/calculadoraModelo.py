@@ -41,7 +41,7 @@ class ModeloCaculadora:
             self.cursor.execute(consulta, (num1, operador, num2))
             self.con.commit()
         except mysql.connector.Error as e:
-            print(f"Error Al agregar la Operacion : {e}")
+            print(f"Error Al agregar la Operación : {e}")
 
     def agregar_resultado(self, resultados): #agrega los resultados de las operaciones 
         try:
@@ -60,7 +60,7 @@ class ModeloCaculadora:
             return resultado[0]
            
         except mysql.connector.Error as e:
-            print(f"Error Al obtener el id de la operacion: {e}")
+            print(f"Error Al obtener el id de la operación: {e}")
         
     def obtener_id_resultado(self):#muestra el id del resultado
 
@@ -71,7 +71,7 @@ class ModeloCaculadora:
             return resultado[0]
             
         except mysql.connector.Error as e:
-            print(f"Error Al obtener elid de reultados: {e}")
+            print(f"Error Al obtener el id de resultados: {e}")
         
     def sumar(self, num1, num2):  #funcion suma
         return num1 + num2

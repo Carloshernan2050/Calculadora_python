@@ -22,5 +22,5 @@ while True:  #menu principal
         print(Fore.MAGENTA + "Saliendo de la Calculadora." + Style.RESET_ALL )
         break
     else:
-        print(Fore.MAGENTA + "Opcion no valida."+ Style.RESET_ALL)
+        print(Fore.MAGENTA + "Opción no valída."+ Style.RESET_ALL)
         
