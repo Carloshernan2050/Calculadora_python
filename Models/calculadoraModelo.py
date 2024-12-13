@@ -12,8 +12,9 @@ class ModeloCaculadora:
             self.cursor = self.con.cursor()
         except mysql.connector.Error as e:
             print(f"Error de conexión a la base de datos: {e}")
+
         
-    def agregar_al_historial(self, id_operacion, id_resultado):
+    def agregar_al_historial(self, id_operacion, id_resultado): #agrega las operaciones generadas al historial
         try:
             consulta = "INSERT INTO operacion_resultado (id_operacion, id_resultado) VALUES (%s, %s)"
             self.cursor.execute(consulta, (id_operacion, id_resultado))
@@ -34,7 +35,7 @@ class ModeloCaculadora:
         except mysql.connector.Error as e:
             print(f"Error Al ver el Historial: {e}")
         
-    def agregar_operacion(self, num1, operador, num2):
+    def agregar_operacion(self, num1, operador, num2):  #agrega los datos ingresados de las operaciones 
         try:
             consulta = "INSERT INTO operacion (num1, operador, num2) VALUES (%s, %s, %s)"
             self.cursor.execute(consulta, (num1, operador, num2))
@@ -42,7 +43,7 @@ class ModeloCaculadora:
         except mysql.connector.Error as e:
             print(f"Error Al agregar la Operacion : {e}")
 
-    def agregar_resultado(self, resultados):
+    def agregar_resultado(self, resultados): #agrega los resultados de las operaciones 
         try:
             consulta = "INSERT INTO resultado (resultados) VALUES (%s)"
             self.cursor.execute(consulta,(resultados,))
@@ -50,7 +51,7 @@ class ModeloCaculadora:
         except mysql.connector.Error as e:
             print(f"Error Al agregar el Resultado: {e}")
     
-    def obtener_id_operaciones(self):
+    def obtener_id_operaciones(self):  #muestra el id de las operaciones
 
         try:
             consulta = "SELECT id FROM operacion ORDER BY id DESC LIMIT 1"
@@ -61,7 +62,7 @@ class ModeloCaculadora:
         except mysql.connector.Error as e:
             print(f"Error Al obtener el id de la operacion: {e}")
         
-    def obtener_id_resultado(self):
+    def obtener_id_resultado(self):#muestra el id del resultado
 
         try:
             consulta = "SELECT id FROM resultado ORDER BY id DESC LIMIT 1"
@@ -72,16 +73,16 @@ class ModeloCaculadora:
         except mysql.connector.Error as e:
             print(f"Error Al obtener elid de reultados: {e}")
         
-    def sumar(self, num1, num2):
+    def sumar(self, num1, num2):  #funcion suma
         return num1 + num2
     
-    def resta(self, num1, num2):
+    def resta(self, num1, num2): #funcion resta
         return num1 - num2
     
-    def multiplicar(self, num1,num2):
+    def multiplicar(self, num1,num2):  #funcion multiplicacion
         return num1 * num2
     
-    def dividir(self, num1, num2):
+    def dividir(self, num1, num2):  # funcion divicion 
         return num1 / num2
 
 

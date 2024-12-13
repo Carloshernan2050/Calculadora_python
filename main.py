@@ -10,7 +10,7 @@ if __name__ == "__main__":
     vista_calculadora = VistaCalculador()
     controlador_calculadora = ControladorCalculadora(modelo_calculadora, vista_calculadora) 
 
-while True:
+while True:  #menu principal
     print(Fore.LIGHTGREEN_EX +"\n--- Sistema Calculadora ---" + Style.RESET_ALL)
     print("1. Calculadora")
     print("2. Salir")

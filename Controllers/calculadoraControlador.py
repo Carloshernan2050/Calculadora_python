@@ -7,9 +7,11 @@ class ControladorCalculadora:
     def ejecutar_c(self):
 
         while True:
-            self.vista.mostrar_menu()
+            self.vista.mostrar_menu()  #muestra el menu de inicio de la calculadora
             opcion = input(Fore.LIGHTBLUE_EX + "Seleccione una opcion (1-4): " + Style.RESET_ALL)
-            if opcion == '1':
+
+            #ejecuta la operacion suma
+            if opcion == '1': 
 
                 while True:
 
@@ -36,6 +38,8 @@ class ControladorCalculadora:
                         except ValueError:
                             self.vista.mostrar_mensaje(Fore.MAGENTA + "Error: Solo se permiten numeros" + Style.RESET_ALL)
 
+
+            #ejecuta la operacion resta
             elif opcion == '2':
 
                 while True:
@@ -63,7 +67,9 @@ class ControladorCalculadora:
                             
                         except ValueError:
                             self.vista.mostrar_mensaje(Fore.MAGENTA + "Error: Solo se permiten numeros" + Style.RESET_ALL)
+            
 
+            #ejecuta la operacion multiplicacion
             elif opcion  == '3':
 
                 while True:
@@ -93,6 +99,8 @@ class ControladorCalculadora:
                         except ValueError:
                             self.vista.mostrar_mensaje(Fore.MAGENTA + "Error: Solo se Permiten Numeros" + Style.RESET_ALL)
 
+
+            #ejecuta la operacion divicion
             elif opcion == '4':
                 while True:
 
@@ -124,6 +132,8 @@ class ControladorCalculadora:
                         except ValueError:
                             self.vista.mostrar_mensaje(Fore.MAGENTA + "Error: Solo se Permiten Numeros." + Style.RESET_ALL)
 
+
+            #muestra el historial de operaciones
             elif opcion == '5':
                 historial = self.modelo.historial()
                 if historial:
@@ -131,7 +141,8 @@ class ControladorCalculadora:
                 else:
                     self.vista.mostrar_mensaje(Fore.RED + "No hay Registros en el Historial." + Style.RESET_ALL)
                     
-                
+            
+            #salir del programa
             elif opcion =='6':
                 self.vista.mostrar_mensaje("Saliendo de la Calculadora.")
                 break
