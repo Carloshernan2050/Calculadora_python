@@ -130,8 +130,7 @@ class ControladorCalculadora:
                     self.vista.mostrar_historial(historial)
                 else:
                     self.vista.mostrar_mensaje(Fore.RED + "No hay Registros en el Historial." + Style.RESET_ALL)
-                    
-                
+                     
             elif opcion =='6':
                 self.vista.mostrar_mensaje("Saliendo de la Calculadora.")
                 break
