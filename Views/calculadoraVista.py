@@ -12,15 +12,10 @@ class VistaCalculador:
         print(Fore.RESET + "6. Salir" + Style.RESET_ALL)
     
     @staticmethod
-<<<<<<< HEAD
-    def obtener_datos_operacion():  #datos ingresados por el usuario
-        num1 = input(Fore.CYAN + "Ingrese El Primer Numero: \n" + Style.RESET_ALL) 
-        num2 = input(Fore.CYAN + "Ingrese El Segundo Numero: \n" + Style.RESET_ALL)
-=======
+   
     def obtener_datos_operacion():
         num1 = input(Fore.CYAN + "Ingrese El Primer Número: \n" + Style.RESET_ALL) 
-        num2 = input(Fore.CYAN + "Ingrese El Segundo Número: \n" + Style.RESET_ALL)
->>>>>>> 19ede8893fd8cf80b1bf2c9e5b42de5c30b3d466
+        num2 = input(Fore.CYAN + "Ingrese El Segundo Número: \n" + Style.RESET_ALL )
         return num1, num2
 
     @staticmethod

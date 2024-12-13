@@ -7,17 +7,10 @@ class ControladorCalculadora:
     def ejecutar_c(self):
 
         while True:
-<<<<<<< HEAD
-            self.vista.mostrar_menu()  #muestra el menu de inicio de la calculadora
-            opcion = input(Fore.LIGHTBLUE_EX + "Seleccione una opcion (1-4): " + Style.RESET_ALL)
 
-            #ejecuta la operacion suma
-            if opcion == '1': 
-=======
             self.vista.mostrar_menu()
             opcion = input(Fore.LIGHTBLUE_EX + "Seleccione una opción (1-4): " + Style.RESET_ALL)
-            if opcion == '1':
->>>>>>> 19ede8893fd8cf80b1bf2c9e5b42de5c30b3d466
+            if opcion: 
 
                 while True:
 
@@ -72,12 +65,10 @@ class ControladorCalculadora:
                                 self.vista.mostrar_mensaje(Fore.MAGENTA + "Error: Solo se permiten Números" + Style.RESET_ALL)
                             
                         except ValueError:
-<<<<<<< HEAD
+
                             self.vista.mostrar_mensaje(Fore.MAGENTA + "Error: Solo se permiten numeros" + Style.RESET_ALL)
             
-=======
                             self.vista.mostrar_mensaje(Fore.MAGENTA + "Error: Solo se permiten Números" + Style.RESET_ALL)
->>>>>>> 19ede8893fd8cf80b1bf2c9e5b42de5c30b3d466
 
             #ejecuta la operacion multiplicacion
             elif opcion  == '3':
@@ -108,7 +99,6 @@ class ControladorCalculadora:
                         
                         except ValueError:
                             self.vista.mostrar_mensaje(Fore.MAGENTA + "Error: Solo se Permiten Números" + Style.RESET_ALL)
-
 
             #ejecuta la operacion divicion
             elif opcion == '4':
@@ -141,22 +131,14 @@ class ControladorCalculadora:
                             
                         except ValueError:
                             self.vista.mostrar_mensaje(Fore.MAGENTA + "Error: Solo se Permiten Números." + Style.RESET_ALL)
-
-
             #muestra el historial de operaciones
             elif opcion == '5':
                 historial = self.modelo.historial()
                 if historial:
                     self.vista.mostrar_historial(historial)
                 else:
-                    self.vista.mostrar_mensaje(Fore.RED + "No hay Registros en el Historial." + Style.RESET_ALL)
-<<<<<<< HEAD
-                    
-            
+                    self.vista.mostrar_mensaje(Fore.RED + "No hay Registros en el Historial." + Style.RESET_ALL)            
             #salir del programa
-=======
-                     
->>>>>>> 19ede8893fd8cf80b1bf2c9e5b42de5c30b3d466
             elif opcion =='6':
                 self.vista.mostrar_mensaje("Saliendo de la Calculadora.")
                 break
