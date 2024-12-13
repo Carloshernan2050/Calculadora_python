@@ -13,15 +13,15 @@ class VistaCalculador:
     
     @staticmethod
     def obtener_datos_operacion():
-        num1 = input(Fore.CYAN + "Ingrese El Primer Numero: \n" + Style.RESET_ALL) 
-        num2 = input(Fore.CYAN + "Ingrese El Segundo Numero: \n" + Style.RESET_ALL)
+        num1 = input(Fore.CYAN + "Ingrese El Primer Número: \n" + Style.RESET_ALL) 
+        num2 = input(Fore.CYAN + "Ingrese El Segundo Número: \n" + Style.RESET_ALL)
         return num1, num2
 
     @staticmethod
     def mostrar_historial(historial):
         print(Fore.CYAN + "\n--- Historial de Operaciones ---" + Style.RESET_ALL)
         for operacion in historial:
-            print(f"ID: {operacion[0]}, Primer Numero : {operacion[1]} Signo: {operacion[2]}, Segundo Numero: {operacion[3]}, Resultado: {operacion[4]}")
+            print(f"ID: {operacion[0]}, Primer Número : {operacion[1]} Signo: {operacion[2]}, Segundo Número: {operacion[3]}, Resultado: {operacion[4]}")
            
     @staticmethod
     def mostrar_mensaje(mensaje):

@@ -8,14 +8,14 @@ class ControladorCalculadora:
 
         while True:
             self.vista.mostrar_menu()
-            opcion = input(Fore.LIGHTBLUE_EX + "Seleccione una opcion (1-4): " + Style.RESET_ALL)
+            opcion = input(Fore.LIGHTBLUE_EX + "Seleccione una opción (1-4): " + Style.RESET_ALL)
             if opcion == '1':
 
                 while True:
 
                     num1, num2 = self.vista.obtener_datos_operacion()
                     if not num1.strip() or not num2.strip():
-                        self.vista.mostrar_mensaje(Fore.MAGENTA+ "Error: No se Ingreso Algun Parametro." + Style.RESET_ALL)
+                        self.vista.mostrar_mensaje(Fore.MAGENTA+ "Error: No se Ingreso Algún Parámetro." + Style.RESET_ALL)
                     else:
 
                         try:
@@ -31,10 +31,10 @@ class ControladorCalculadora:
                                     self.modelo.agregar_al_historial(id_operacion, id_resultado)
                                     break
                             except ValueError:
-                                self.vista.mostrar_mensaje(Fore.MAGENTA + "Error: Solo se permiten numeros" + Style.RESET_ALL)
+                                self.vista.mostrar_mensaje(Fore.MAGENTA + "Error: Solo se permiten Números" + Style.RESET_ALL)
                             
                         except ValueError:
-                            self.vista.mostrar_mensaje(Fore.MAGENTA + "Error: Solo se permiten numeros" + Style.RESET_ALL)
+                            self.vista.mostrar_mensaje(Fore.MAGENTA + "Error: Solo se permiten Números" + Style.RESET_ALL)
 
             elif opcion == '2':
 
@@ -42,7 +42,7 @@ class ControladorCalculadora:
 
                     num1, num2 = self.vista.obtener_datos_operacion()
                     if not num1.strip() or not num2.strip():
-                        self.vista.mostrar_mensaje(Fore.MAGENTA + "Error: No se Ingreso Algun Parametro." + Style.RESET_ALL)
+                        self.vista.mostrar_mensaje(Fore.MAGENTA + "Error: No se Ingreso Algún Parámetro." + Style.RESET_ALL)
                     else:
 
                         try:
@@ -59,10 +59,10 @@ class ControladorCalculadora:
                                 break
 
                             except ValueError:
-                                self.vista.mostrar_mensaje(Fore.MAGENTA + "Error: Solo se permiten numeros" + Style.RESET_ALL)
+                                self.vista.mostrar_mensaje(Fore.MAGENTA + "Error: Solo se permiten Números" + Style.RESET_ALL)
                             
                         except ValueError:
-                            self.vista.mostrar_mensaje(Fore.MAGENTA + "Error: Solo se permiten numeros" + Style.RESET_ALL)
+                            self.vista.mostrar_mensaje(Fore.MAGENTA + "Error: Solo se permiten Números" + Style.RESET_ALL)
 
             elif opcion  == '3':
 
@@ -70,7 +70,7 @@ class ControladorCalculadora:
 
                     num1, num2 = self.vista.obtener_datos_operacion()
                     if not num1.strip() or not num2.strip():
-                        self.vista.mostrar_mensaje(Fore.MAGENTA + "Error: No se Ingreso Algun Parametro." + Style.RESET_ALL)
+                        self.vista.mostrar_mensaje(Fore.MAGENTA + "Error: No se Ingreso Algún Parámetro." + Style.RESET_ALL)
                     else:
 
                         try:
@@ -88,17 +88,17 @@ class ControladorCalculadora:
                                 break
 
                             except ValueError:
-                                self.vista.mostrar_mensaje(Fore.MAGENTA + "Error: Solo se Permiten Numeros" + Style.RESET_ALL)
+                                self.vista.mostrar_mensaje(Fore.MAGENTA + "Error: Solo se Permiten Números" + Style.RESET_ALL)
                         
                         except ValueError:
-                            self.vista.mostrar_mensaje(Fore.MAGENTA + "Error: Solo se Permiten Numeros" + Style.RESET_ALL)
+                            self.vista.mostrar_mensaje(Fore.MAGENTA + "Error: Solo se Permiten Números" + Style.RESET_ALL)
 
             elif opcion == '4':
                 while True:
 
                     num1, num2 = self.vista.obtener_datos_operacion()
                     if not num1.strip() or not num2.strip():
-                        self.vista.mostrar_mensaje(Fore.MAGENTA + "Error: No se Ingreso Algun Parametro." + Style.RESET_ALL)
+                        self.vista.mostrar_mensaje(Fore.MAGENTA + "Error: No se Ingreso Algún Parámetro." + Style.RESET_ALL)
                     else:
 
                         try:
