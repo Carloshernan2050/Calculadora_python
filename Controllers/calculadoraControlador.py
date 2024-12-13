@@ -119,10 +119,10 @@ class ControladorCalculadora:
                                     break
 
                                 except ValueError:
-                                    self.vista.mostrar_mensaje(Fore.MAGENTA + "Error: Solo se Permiten Numeros." + Style.RESET_ALL)
+                                    self.vista.mostrar_mensaje(Fore.MAGENTA + "Error: Solo se Permiten Números." + Style.RESET_ALL)
                             
                         except ValueError:
-                            self.vista.mostrar_mensaje(Fore.MAGENTA + "Error: Solo se Permiten Numeros." + Style.RESET_ALL)
+                            self.vista.mostrar_mensaje(Fore.MAGENTA + "Error: Solo se Permiten Números." + Style.RESET_ALL)
 
             elif opcion == '5':
                 historial = self.modelo.historial()
@@ -135,4 +135,4 @@ class ControladorCalculadora:
                 self.vista.mostrar_mensaje("Saliendo de la Calculadora.")
                 break
             else:
-                self.vista.mostrar_mensaje(Fore.MAGENTA + "Opcion no válida, Intentelo de nuevo." + Style.RESET_ALL)
+                self.vista.mostrar_mensaje(Fore.MAGENTA + "Opcion no válida, Intentalo de nuevo." + Style.RESET_ALL)
