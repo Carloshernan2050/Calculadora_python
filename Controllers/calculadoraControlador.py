@@ -10,7 +10,7 @@ class ControladorCalculadora:
 
             self.vista.mostrar_menu()
             opcion = input(Fore.LIGHTBLUE_EX + "Seleccione una opción (1-4): " + Style.RESET_ALL)
-            if opcion: 
+            if opcion == '1': 
 
                 while True:
 
@@ -23,13 +23,9 @@ class ControladorCalculadora:
                             num1 = int(num1) 
                             try:
                                     num2 = int(num2)
-                                    self.modelo.agregar_operacion(num1, "+", num2)
                                     resultado = self.modelo.sumar(num1, num2)
-                                    self.modelo.agregar_resultado(resultado)
+                                    self.modelo.agregar_operacion(num1, 1 , num2, resultado)
                                     self.vista.mostrar_mensaje(f"La Suma de {num1} + {num2} Es: {self.modelo.sumar(num1, num2)}")
-                                    id_operacion = self.modelo.obtener_id_operaciones()
-                                    id_resultado = self.modelo.obtener_id_resultado()
-                                    self.modelo.agregar_al_historial(id_operacion, id_resultado)
                                     break
                             except ValueError:
                                 self.vista.mostrar_mensaje(Fore.MAGENTA + "Error: Solo se permiten Números" + Style.RESET_ALL)
@@ -51,14 +47,10 @@ class ControladorCalculadora:
                         try:
                             num1 = int(num1)
                             try:
-                                num2 = int(num2)
-                                self.modelo.agregar_operacion(num1, "-", num2)   
+                                num2 = int(num2) 
                                 resultado = self.modelo.resta(num1, num2)
-                                self.modelo.agregar_resultado(resultado)
+                                self.modelo.agregar_operacion(num1, 2 , num2, resultado)  
                                 self.vista.mostrar_mensaje(f"La Resta de {num1} - {num2}  Es: {self.modelo.resta(num1, num2)}")
-                                id_operacion = self.modelo.obtener_id_operaciones()
-                                id_resultado = self.modelo.obtener_id_resultado()
-                                self.modelo.agregar_al_historial(id_operacion, id_resultado)
                                 break
 
                             except ValueError:
@@ -85,13 +77,9 @@ class ControladorCalculadora:
 
                             try:
                                 num2 = int(num2)
-                                self.modelo.agregar_operacion(num1 , "*", num2)
                                 resultado = self.modelo.multiplicar(num1, num2)
-                                self.modelo.agregar_resultado(resultado)
+                                self.modelo.agregar_operacion(num1 , 3 , num2, resultado)
                                 self.vista.mostrar_mensaje(f"La Multiplicación de {num1} x {num2} Es: {self.modelo.multiplicar(num1, num2)}")
-                                id_operacion = self.modelo.obtener_id_operaciones()
-                                id_resultado = self.modelo.obtener_id_resultado()
-                                self.modelo.agregar_al_historial(id_operacion, id_resultado)
                                 break
 
                             except ValueError:
@@ -117,13 +105,9 @@ class ControladorCalculadora:
                             else:
                                 try:
                                     num2 = int(num2)
-                                    self.modelo.agregar_operacion(num1, "/", num2)
                                     resultado = self.modelo.dividir(num1, num2)
-                                    self.modelo.agregar_resultado(resultado)
+                                    self.modelo.agregar_operacion(num1, 4 , num2, resultado)
                                     self.vista.mostrar_mensaje(f"La División de {num1} / {num2} Es: {self.modelo.dividir(num1, num2)}")
-                                    id_operacion = self.modelo.obtener_id_operaciones()
-                                    id_resultado = self.modelo.obtener_id_resultado()
-                                    self.modelo.agregar_al_historial(id_operacion, id_resultado)
                                     break
 
                                 except ValueError:
